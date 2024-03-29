@@ -45,6 +45,8 @@ Managing files in a directory can become chaotic over time, especially when deal
 
 1. Place the `file_organizer.py` script in the directory you want to organize.
 2. Run the script using Python.
+3. A window will open of the File Organizer's GUI.
+4. Click on the "Organize Files" Button.
 3. Files will be organized into folders based on their file extensions.
 
 ## Contributing
