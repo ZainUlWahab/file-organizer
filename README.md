@@ -38,7 +38,7 @@ Managing files in a directory can become chaotic over time, especially when deal
 3. Run the script:
 
     ```bash
-    python file_organizer.py
+    python main.py
     ```
 
 ## Usage
@@ -53,4 +53,4 @@ Contributions are welcome! If you have any suggestions, bug reports, or feature 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
