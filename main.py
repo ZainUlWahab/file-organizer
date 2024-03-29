@@ -36,13 +36,19 @@ def make_folder_name(extension):
 
 files = [f for f in os.listdir() if not f.startswith('.')]  # Exclude hidden files
 
-# Loop which runs till every file is not in its designated folder
-for file in files:
-    if os.path.isfile(file):
-        _,ext = os.path.splitext(file)
-        folder_name = make_folder_name(ext[1:].lower())
-        if not os.path.exists(folder_name):
-            os.mkdir(folder_name)
-        shutil.move(file,folder_name)
+# function which runs till every file is not in its designated folder
+def organize_files():
+    for file in files:
+        try:
+            if os.path.isfile(file):
+                _,ext = os.path.splitext(file)
+                folder_name = make_folder_name(ext[1:].lower())
+                if not os.path.exists(folder_name):
+                    os.mkdir(folder_name)
+                shutil.move(file,folder_name)
+        except Exception as e:
+            print(f"Error occurred while organizing {file}: {e}")
 
-
+# Call the organize_files() function when the script is executed
+if __name__ == "__main__":
+    organize_files()
